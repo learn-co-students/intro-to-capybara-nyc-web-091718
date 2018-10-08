@@ -7,4 +7,4 @@ gem 'shotgun'
 gem 'rspec'
 gem 'capybara'
 
-gem 'learn-co'
+# gem 'learn-co'
