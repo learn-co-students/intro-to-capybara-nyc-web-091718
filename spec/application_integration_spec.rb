@@ -8,6 +8,7 @@ describe "GET '/' - Greeting Form" do
   end
 
   # New test
+  # we tell Capybara to visit the page at '/'. Once that is done, we set some expectations against the page object that represent the user looking at the page in their browser. We can simply assert that the page has an HTML selector for form, meaning that the page contains an HTML element that matches the form tag.
   it 'has a greeting form with a user_name field' do
     visit '/'
 
@@ -15,6 +16,8 @@ describe "GET '/' - Greeting Form" do
     expect(page).to have_field(:user_name)
   end
 end
+
+# This new test is trying to mimic what a user should see when they visit the greeting form, fill in the name 'Avi', and click the 'Submit' button. Because of the amazing RSpec DSL mixed in with Capybara, our test is able to clearly and simply describe that behavior.
 
 describe "POST '/greet' - User Greeting" do
   it 'greets the user personally based on their user_name in the form' do
